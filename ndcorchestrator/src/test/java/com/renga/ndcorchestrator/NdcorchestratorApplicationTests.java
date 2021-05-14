@@ -1,4 +1,4 @@
-package com.unisys.trans.ndcorchestrator;
+package com.renga.ndcorchestrator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
