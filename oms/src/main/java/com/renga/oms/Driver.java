@@ -38,7 +38,7 @@ public class Driver {
 			System.out.println("input received in OMS: "+input);
 			//streamBridge.send("orderParamRQ", input+"converted into OrderParam");
 			//return MessageBuilder.withPayload(input+" :converted into orderviewRS").setHeader("key", Math)  ;
-			String replyMsg = input+" :converted into orderviewRS";
+			String replyMsg = input.getPayload()+" :converted into orderviewRS in OMS";
 			return MessageBuilder.withPayload(replyMsg).copyHeaders(input.getHeaders()).build();
 			
 			//return input+" :converted into orderviewRS";

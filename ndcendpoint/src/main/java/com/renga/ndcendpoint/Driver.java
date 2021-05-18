@@ -158,9 +158,10 @@ public class Driver {
 	    		// System.out.println("order identifier before processing :"+tokenizedMsg.hashCode());
 	    		 //streamBridge.send("tokenized-orderRQ",  outboundMessage.build());
 	    		// return new String(gateway.process(tokenizedMsg));
-	    		 new String(gateway.process(tokenizedMsg));
+	    		 String orderViewRs = new String(gateway.process(orderCreateRQ));
+	    		 orderViewRSService.setOrderViewRS(String.valueOf(orderCreateRQ.hashCode()), orderViewRs);
 	    		 while(true) {
-	    			 String orderviewRS = orderViewRSService.getOrderViewRS(String.valueOf(new String("").hashCode()));
+	    			 String orderviewRS = orderViewRSService.getOrderViewRS(String.valueOf(orderCreateRQ.hashCode()));
 	    			 if(orderviewRS != null && !orderviewRS.isEmpty())
 	    				 return orderviewRS;
 	    		 }

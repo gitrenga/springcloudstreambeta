@@ -26,7 +26,7 @@ public class Driver {
 		return (input) -> {
 			System.out.println("input received in ndc translator: "+input);
 			//streamBridge.send("orderParamRQ", input+"converted into OrderParam");
-			String replyMsg = input.getPayload()+": converted into OrderParam";
+			String replyMsg = input.getPayload()+": converted into OrderParam in ndctranslator";
 			return MessageBuilder.withPayload(replyMsg).copyHeaders(input.getHeaders()).build();
 			//return input+": converted into OrderParam";
 			};

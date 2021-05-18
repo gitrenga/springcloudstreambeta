@@ -26,7 +26,7 @@ public class Driver {
 		return (input) -> {
 			System.out.println("input received in payment gateway: "+input);
 			//streamBridge.send("orderParamRQ", input+"converted into OrderParam");
-			String replyMsg = input.getPayload()+": tokenized payment info";
+			String replyMsg = input.getPayload()+": tokenized payment in payment gateway";
 			return MessageBuilder.withPayload(replyMsg).copyHeaders(input.getHeaders()).build();
 			//return input+": converted into OrderParam";
 			};

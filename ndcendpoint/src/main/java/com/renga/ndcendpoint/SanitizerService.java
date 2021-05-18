@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class SanitizerService {
 	
 	public String sanitize(String OrderRQ) {
-		return OrderRQ + ": sanitized";
+		return OrderRQ + ": sanitized in ndcendpoint";
 	}
 
 }

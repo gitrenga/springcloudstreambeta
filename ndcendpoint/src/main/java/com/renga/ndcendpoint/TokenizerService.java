@@ -13,7 +13,7 @@ public class TokenizerService {
 	public String tokenize(String OrderCreateRQ) {
 		//System.out.println("tokenize called");
 		streamBridge.send("tokenRequest", OrderCreateRQ);
-		return OrderCreateRQ+":token request sent";
+		return OrderCreateRQ+":token request sent in ndcendpoint";
 	}
 
 }
